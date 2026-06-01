@@ -15,10 +15,9 @@ Premium full-stack coffee pickup ordering platform for four BrewPoint locations 
 - Database: SQL Server.
 
 ## Team Members
-- Member 1: Name / Roll No
-- Member 2: Name / Roll No
-- Member 3: Name / Roll No
-- Member 4: Name / Roll No
+- Member 1: Haniya Noor / 2502087
+- Member 2: Sana Aziz / 2502083
+  
 
 ## Folder Structure
 ```text
