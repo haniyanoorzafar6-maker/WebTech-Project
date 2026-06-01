@@ -2,15 +2,14 @@
 
 ## Cover Page
 Project: BrewPoint Islamabad  
-Course: [Course Name]  
-Instructor: [Instructor Name]  
-Submission Date: [Date]
+Course: [Web tech]  
+Instructor: [Mam Warda]  
+Submission Date: [1/6/2026]
 
 ## Team Details
-- Member 1: [Name / Roll No]
-- Member 2: [Name / Roll No]
-- Member 3: [Name / Roll No]
-- Member 4: [Name / Roll No]
+- Member 1: [Haniya Noor/ 2502087]
+- Member 2: [Sana Aziz / 2502083]
+  
 
 ## Introduction
 BrewPoint Islamabad is a full-stack coffee pickup ordering platform for four Islamabad locations. It combines a polished animated frontend with a secure ASP.NET Core backend and SQL Server database.
