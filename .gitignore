@@ -1,0 +1,16 @@
+node_modules/
+.python-packages/
+dist/
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.db
+*.db-shm
+*.db-wal
+*.tsbuildinfo
+.env
+backend/appsettings.Production.json
+frontend/.env
