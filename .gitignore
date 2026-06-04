@@ -13,4 +13,8 @@ obj/
 *.tsbuildinfo
 .env
 backend/appsettings.Production.json
+backend/aws-publish/
+backend/brewpoint-api-aws.zip
 frontend/.env
+frontend-react-backup/
+angular-frontend/

@@ -1,0 +1,33 @@
+<div class="scroll-line"></div>
+<header class="nav">
+  <div class="nav-inner">
+    <a routerLink="/" class="brand">
+      <span class="brand-mark"><img src="/assets/generated/brewpoint-logo.png" alt="BrewPoint logo"></span>
+      <span>BrewPoint <b>Islamabad</b></span>
+    </a>
+    <nav>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      <a routerLink="/catalog" routerLinkActive="active">Catalog</a>
+      <a routerLink="/locations" routerLinkActive="active">Locations</a>
+      @if (auth.user()) { <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a> }
+      @if (auth.isAdmin()) { <a routerLink="/admin" routerLinkActive="active">Admin</a> }
+    </nav>
+    <div class="nav-actions">
+      @if (auth.user()) {
+        <a routerLink="/profile" class="profile-link"><span class="icon-link">{{ auth.user()!.fullName.charAt(0) }}</span><span>{{ auth.user()!.fullName }}</span></a>
+        <button class="button ghost" (click)="auth.logout()">Sign out</button>
+      } @else {
+        <a routerLink="/login" class="button ghost">Login</a>
+        <a routerLink="/signup" class="button">Signup</a>
+      }
+    </div>
+  </div>
+</header>
+<main><router-outlet /></main>
+<footer>
+  <div class="footer-inner">
+    <div class="brand"><span class="brand-mark"><img src="/assets/generated/brewpoint-logo.png" alt=""></span><span>BrewPoint <b>Islamabad</b></span></div>
+    <p>Four neighbourhood roasteries. One beautifully simple pickup ritual.</p>
+    <p>F-6 / Blue Area / I-8 / Bahria Town</p>
+  </div>
+</footer>

@@ -51,8 +51,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddCors(options =>
 {
+    var allowedOrigins = builder.Configuration
+        .GetSection("Cors:AllowedOrigins")
+        .Get<string[]>() ?? ["http://localhost:4200", "http://127.0.0.1:4200"];
+
     options.AddPolicy("Frontend", policy => policy
-        .WithOrigins("http://localhost:5173", "http://127.0.0.1:5173")
+        .WithOrigins(allowedOrigins)
         .AllowAnyHeader()
         .AllowAnyMethod());
 });
@@ -88,6 +92,12 @@ app.UseCors("Frontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapGet("/", () => Results.Ok(new
+{
+    service = "BrewPoint Islamabad API",
+    status = "healthy"
+}));
+app.MapGet("/health", () => Results.Ok(new { status = "healthy" }));
 
 using (var scope = app.Services.CreateScope())
 {
