@@ -15,6 +15,8 @@ obj/
 backend/appsettings.Production.json
 backend/aws-publish/
 backend/brewpoint-api-aws.zip
+backend/brewpoint-api-aws-linux.zip
+aws-package-output/
 frontend/.env
 frontend-react-backup/
 angular-frontend/

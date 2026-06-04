@@ -17,5 +17,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Procfile" CopyToPublishDirectory="Always" />
+    <Content Remove="aws-publish\**" />
+    <None Remove="aws-publish\**" />
   </ItemGroup>
 </Project>
